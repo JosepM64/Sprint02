@@ -1,0 +1,20 @@
+//El comando mencionado se utiliza para enumerar todas las bases de datos.
+show dbs
+
+//El siguiente comando proporcionará detalles de las bases de datos junto con varias colecciones y parámetros relacionados de esa base de datos.
+db.stats();
+
+
+// Select the database to use.
+use('Restaurant')
+
+
+db.Nuevayork.find();
+db.Nuevayork.findOne();
+
+db.Nuevayork.find({}, {restaurant_id: 1, borough: 1, cuisine: 1})
+
+db.runCommand({listCollections: 1, authorizedCollections: true, nameOnly: true})
+
+
+db.getCollectionInfos();

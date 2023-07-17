@@ -1,0 +1,24 @@
+//El comando mencionado se utiliza para enumerar todas las bases de datos.
+show dbs
+
+//El siguiente comando proporcionará detalles de las bases de datos junto con varias colecciones y parámetros relacionados de esa base de datos.
+db.stats();
+
+
+// Select the database to use.
+use('Restaurant')
+
+
+db.Nuevayork.find();
+db.Nuevayork.findOne();
+
+db.Nuevayork.find({}, {restaurant_id: 1, borough: 1, cuisine: 1})
+
+db.runCommand({listCollections: 1, authorizedCollections: true, nameOnly: true})
+
+
+db.getCollectionInfos();
+
+
+{"address": {"building": "469", "coord": [-73.961704, 40.662942], "street": "Flatbush Avenue", "zipcode": "11225"}, "borough": "Brooklyn", "cuisine": "Hamburgers", "grades": [{"date": {"$date": 1419897600000}, "grade": "A", "score": 8}, {"date": {"$date": 1404172800000}, "grade": "B", "score": 23}, {"date": {"$date": 1367280000000}, "grade": "A", "score": 12}, {"date": {"$date": 1336435200000}, "grade": "A", "score": 12}], "name": "Wendy'S", "restaurant_id": "30112340"}
+
